@@ -65,7 +65,7 @@ logo ="""
 \033[1;92m➣  Github   : https://github.com/JAM-x-MISHI
 \033[1;92m➣  Whatsapp : +971528752764
 \033[1;92m➣  Note     : Having Problem? Contact Me On Whatsapp.
-\033[1;92m➣  Disclamiar : This Is For Educational Purpose Only . Iam Not Responsible For Any Illegal Use Or Activity.
+\033[1;92m➣  Disclamiar : This Is For Educational Purpose Only Iam Not Responsible For Any Illegal Use Or Activity.
 ---------------------------------------------------"""
 def tik():
 	titik = ['.   ','..  ','... ']
