@@ -127,7 +127,7 @@ def login():
 		id = raw_input('[+] ID/NUMBER: ')
 		pwd = raw_input('[+] PASSWORD: ')
 		try:
-			br.open('https://mbasic.facebook.com')
+			br.open('https://m.facebook.com')
 		except mechanize.URLError:
 			print"\n\x1b[1;97mThere is no internet connection"
 			keluar()
